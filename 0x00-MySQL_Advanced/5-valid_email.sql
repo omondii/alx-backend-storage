@@ -7,8 +7,6 @@ FOR EACH ROW
 BEGIN
     IF NEW.email <> (SELECT email FROM users WHERE name = NEW.name) THEN
         SET NEW.valid_email = 0;
-    ELSE
-        SET NEW.valid_email= 1;
     END IF;
 END;//
 DELIMITER ;
