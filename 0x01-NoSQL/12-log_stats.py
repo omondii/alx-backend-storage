@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+""" 12-log_stats """
 from pymongo import MongoClient
 
+
 def nginx_log_stats():
-    # Connect to the MongoDB server and access the 'logs' database and 'nginx' collection
+    """ Python script that provides some stats about Nginx logs stored in MongoDB """
     client = MongoClient('localhost', 27017)
     db = client['logs']
     collection = db['nginx']
